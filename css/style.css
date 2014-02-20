@@ -1,0 +1,424 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, hr, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+sup {
+  vertical-align: top;
+  font-size: 70%;
+  position: relative;
+}
+body {
+  line-height: 1;
+}
+ul,
+ol {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  margin: 0;
+  border: 0;
+  display: block;
+}
+p {
+  margin: 0 0 5px 0;
+  border: 0;
+}
+strong,
+b {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+/* hacks */
+/* -- Clear Fix -- */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+/* Hide from IE Mac \*/
+.clearfix {
+  display: block;
+}
+/* End hide from IE Mac */
+/* removing outline? note: has effect on submit button text positioning (moves up a little) */
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+  border: none;
+}
+
+.fakeInnerDiv {
+  overflow: hidden;
+  width: 100%;
+}
+.widgetBackground {
+  position: absolute;
+  top: 0px;
+  -moz-opacity: 0.5;
+  -ms-filter: "alpha(opacity=50)";
+  filter: alpha(opacity=50);
+  opacity: .5;
+  z-index: -20;
+}
+.widgetTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 350;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.leaderboardContainer,
+.listContainer,
+.textFeedContainer,
+.tableWidgetBody tr {
+  border-top-width: 1px;
+  border-top-style: solid;
+  clear: both;
+}
+
+.textFeedItemDate {
+  display: block;
+  text-align: left;
+  font-size: 75%;
+  color: #aaaaaa;
+  font-weight: bold;
+}
+.textFeedItem > a {
+  color: inherit;
+}
+.textFeedContainer {
+  overflow: hidden;
+  position: relative;
+}
+.textFeedTitle {
+  color: #e86e00;
+	font-weight: bold;
+}
+
+/* ==============================
+HTML ELEMENTS
+============================== */
+html {
+  height: 100%;
+}
+body {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50% 50%;
+  min-height: 555px;
+	font-family: "Helvetica Neue",Arial,sans-serif;
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #00bdff;
+}
+a:hover,
+a:active {
+  text-decoration: underline;
+  color: #00bdff;
+  outline: none;
+}
+form {
+  position: relative;
+}
+h2 {
+  padding: 0 0 7px 0;
+}
+h3 {
+  font-weight: inherit;
+  padding: 0 0 6px 0;
+  font-size: 12px;
+}
+h4 {
+  padding: 0 0 5px 0;
+}
+h5 {
+  text-transform: uppercase;
+  padding: 0 0 3px 0;
+}
+.highlight {
+  color: #00bdff;
+}
+li {
+  margin-top: 4px;
+}
+/* ==============================
+LAYOUT
+============================== */
+#topSpacer {
+  height: 0;
+}
+#dashboard {
+  top: 0px;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+#grid svg {
+  position: relative;
+  z-index: 100;
+  display: block;
+  /* prevents FF from selecting all text when squares are dblclicked */
+
+}
+#grid svg rect {
+  position: relative;
+}
+/* ==============================
+GRID
+============================== */
+#grid .widgetCont {
+  margin: -4px;
+}
+#grid .widgetCont .fakeInnerDiv,
+#grid .widgetCont svg {
+  position: relative;
+  z-index: -10;
+  /*    cursor: move;*/
+
+}
+
+/* Color Scheme */
+body.scheme-dark {
+  color: #ccc;
+  background-color: black;
+}
+body.scheme-dark .widgetTitle {
+  color: #aaa;
+}
+body.scheme-dark .widgetBackground,
+body.scheme-dark .widgetDisable {
+  background-color: #333;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+body.scheme-dark .leaderboardContainer,
+body.scheme-dark .listContainer,
+body.scheme-dark .textFeedContainer,
+body.scheme-dark .tableWidget tr {
+  border-top-color: #4d4d4d;
+}
+
+body.scheme-dark text {
+  fill: #ffffff;
+}
+body.Triggers.scheme-dark .lt-watermark {
+  background-image: url(/static/website/doc/tools-triggers.png);
+}
+body.scheme-light {
+  color: #333;
+  background-color: white;
+}
+body.scheme-light #grid {
+  background-image: url(/static/img/square-bg-alt.png);
+}
+body.scheme-light .widgetTitle {
+  color: #555;
+}
+body.scheme-light .widgetBackground,
+body.scheme-light .widgetDisable {
+  background-color: #ddd;
+  -webkit-box-shadow: 0px 0px 5px #000;
+  -moz-box-shadow: 0px 0px 5px #000;
+  box-shadow: 0px 0px 5px #000;
+}
+body.scheme-light .leaderboardContainer,
+body.scheme-light .listContainer,
+body.scheme-light .textFeedContainer,
+body.scheme-light .tableWidget tr {
+  border-top-color: #c8c8c8;
+}
+/* CUSTOM CSS OVERRIDES */
+html {
+	overflow: auto;
+}
+body {
+	overflow: auto;
+	background-image: url('/images/bg_exr_space.png');
+	background-position: 50% 50%;
+}
+body.scheme-dark {
+	color:#cfcfcf;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, hr, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, hr {
+	line-height: 1.45em;
+}
+html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button {
+	padding: 0;
+	margin: 0;
+	font-family: "Helvetica Neue",Arial,sans-serif;
+	text-decoration: none;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-transform: none;
+	vertical-align: baseline;
+	list-style: none;
+	border: 0;
+	-webkit-outline: 0;
+	-moz-outline: 0;
+	-ms-outline: 0;
+	-o-outline: 0;
+	outline: 0;
+}
+.grid-container {
+	width: 98%;
+	top: 0px;
+	margin: 10px auto 0;
+	position: relative;
+}
+#grid {
+	-webkit-background-size: 41px;
+	background-size: 41px;
+	background-image: none;
+}
+#grid .widgetCont {
+	display: block;
+	cursor: auto;
+	position: relative;
+	width: 100%;
+	margin: 0 0 20px;
+}
+#grid .widgetCont#widget-twitter {
+	text-align: center;
+}
+#grid .widgetCont#widget-twitter iframe {
+	width: 90%;
+}
+#grid .widgetCont#widget-links {
+	clear: left;
+}
+#grid .widgetCont .fakeInnerDiv, #grid .widgetCont svg {
+	padding-bottom: 10px;
+}
+.textFeedContainer, .widgetCont#widget-twitter iframe {
+	margin-top: 0px;
+	margin-left: 14.35px;
+	margin-right: 14.35px;
+	padding-bottom: .25em;
+	border-top-width: 1px;
+}
+.textFeedContainer {
+	padding-top: .5em;	
+}
+.textFeedContainer:first-child {
+	margin-top: 39px;
+}
+.textFeedBody {
+	margin-bottom: 0.25em;
+	display: block;
+}
+.textFeedContainer img {
+	width: 7.16332%;
+	float: left;
+	margin-right: .5em;
+}
+.textFeedItem {
+	overflow: hidden;
+}
+body.scheme-dark .widgetCont .widgetTitle {
+	color: #cfcfcf;
+	font-weight: bold;
+	font-size: 16px;	
+	left: 14px;
+	line-height: 41px;
+}
+.widgetBackground {
+  position: absolute;
+  top: 0px;
+  -moz-opacity: 0.8 !important;
+  -ms-filter: "alpha(opacity=80)" !important;
+  filter: alpha(opacity=80) !important;
+  opacity: .8 !important;
+  z-index: -20;
+	width: 98.5%;
+	height: 98.5%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	top: 3px;
+	left: 3px;
+	opacity: 0.5;
+}
+#grid .widgetCont .fakeInnerDiv, #grid .widgetCont svg {
+	height: 100%;
+}
+@media screen and (min-width: 600px) {
+	.grid-container {
+		margin-top: 4px;
+	}
+	#grid .widgetCont {
+		width:29.16667%;
+		float: left;
+		margin: 6px -4px 0;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	.widgetCont#widget-twitter {
+		float: right;
+	}
+	#grid .widgetCont#widget-news, #grid .widgetCont#widget-status {
+		width:41.6667%;
+	}
+	#grid .widgetCont#widget-links, #grid .widgetCont#widget-faq {
+		margin-right: 10px;	
+	}
+}
+@media screen and (min-width: 1249px) {
+	body {
+		font-size: 14px;
+	}
+}
