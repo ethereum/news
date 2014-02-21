@@ -8,6 +8,84 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
   background: transparent;
 }
+/* ==============================
+HTML ELEMENTS
+============================== */
+body {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  min-height: 555px;
+	font-family: "Helvetica Neue",Arial,sans-serif;
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+	background-image: url('/images/ethereumsplash-bg-web01-min.jpg');
+	background-position: 50% 50%;
+}
+body.scheme-dark {
+	color:#cfcfcf;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, hr, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, hr {
+	line-height: 1.45em;
+}
+html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button {
+	padding: 0;
+	margin: 0;
+	font-family: "Helvetica Neue",Arial,sans-serif;
+	text-decoration: none;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-transform: none;
+	vertical-align: baseline;
+	list-style: none;
+	border: 0;
+	-webkit-outline: 0;
+	-moz-outline: 0;
+	-ms-outline: 0;
+	-o-outline: 0;
+	outline: 0;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #90A0F0;
+	border-bottom: 1px solid #90A0F0;
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-ms-transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+	color: #F3F4F3;
+  outline: none;
+}
+form {
+  position: relative;
+}
+h2 {
+  padding: 0 0 7px 0;
+}
+h3 {
+  font-weight: inherit;
+  padding: 0 0 6px 0;
+  font-size: 12px;
+}
+h4 {
+  padding: 0 0 5px 0;
+}
+h5 {
+  text-transform: uppercase;
+  padding: 0 0 3px 0;
+}
+.highlight {
+  color: #00bdff;
+}
+li {
+  margin-top: 4px;
+}
 sup {
   vertical-align: top;
   font-size: 70%;
@@ -16,12 +94,10 @@ sup {
 body {
   line-height: 1;
 }
-ul,
-ol {
+ul, ol {
   list-style: none;
 }
-blockquote,
-q {
+blockquote, q {
   quotes: none;
 }
 blockquote:before,
@@ -135,61 +211,11 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   position: relative;
 }
 .textFeedTitle {
-  color: #e86e00;
+  color: #F3F4F3;
 	font-weight: bold;
+	margin-right: .25em;
 }
 
-/* ==============================
-HTML ELEMENTS
-============================== */
-html {
-  height: 100%;
-}
-body {
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: 50% 50%;
-  min-height: 555px;
-	font-family: "Helvetica Neue",Arial,sans-serif;
-  font-size: 12px;
-  width: 100%;
-  height: 100%;
-}
-a {
-  cursor: pointer;
-  text-decoration: none;
-  color: #00bdff;
-}
-a:hover,
-a:active {
-  text-decoration: underline;
-  color: #00bdff;
-  outline: none;
-}
-form {
-  position: relative;
-}
-h2 {
-  padding: 0 0 7px 0;
-}
-h3 {
-  font-weight: inherit;
-  padding: 0 0 6px 0;
-  font-size: 12px;
-}
-h4 {
-  padding: 0 0 5px 0;
-}
-h5 {
-  text-transform: uppercase;
-  padding: 0 0 3px 0;
-}
-.highlight {
-  color: #00bdff;
-}
-li {
-  margin-top: 4px;
-}
 /* ==============================
 LAYOUT
 ============================== */
@@ -239,16 +265,19 @@ body.scheme-dark .widgetTitle {
 }
 body.scheme-dark .widgetBackground,
 body.scheme-dark .widgetDisable {
-  background-color: #333;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+	background: #27323f;
+	background: rgba(39, 50, 63,0.98);
+	box-shadow: 0 0 3px rgba(0,0,0,.6);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,.6);
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,.6);
+	-ms-box-shadow: 0 0 3px rgba(0,0,0,.6);
+	-o-box-shadow: 0 0 3px rgba(0,0,0,.6);
 }
 body.scheme-dark .leaderboardContainer,
 body.scheme-dark .listContainer,
 body.scheme-dark .textFeedContainer,
 body.scheme-dark .tableWidget tr {
-  border-top-color: #4d4d4d;
+  border-top-color: #2d3a49;
 }
 
 body.scheme-dark text {
@@ -281,47 +310,18 @@ body.scheme-light .tableWidget tr {
   border-top-color: #c8c8c8;
 }
 /* CUSTOM CSS OVERRIDES */
-html {
-	overflow: auto;
-}
-body {
-	overflow: auto;
-	background-image: url('/images/bg_exr_space.png');
-	background-position: 50% 50%;
-}
-body.scheme-dark {
-	color:#cfcfcf;
-}
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, hr, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, hr {
-	line-height: 1.45em;
-}
-html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button {
-	padding: 0;
-	margin: 0;
-	font-family: "Helvetica Neue",Arial,sans-serif;
-	text-decoration: none;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-	text-transform: none;
-	vertical-align: baseline;
-	list-style: none;
-	border: 0;
-	-webkit-outline: 0;
-	-moz-outline: 0;
-	-ms-outline: 0;
-	-o-outline: 0;
-	outline: 0;
-}
+
 .grid-container {
 	width: 98%;
 	top: 0px;
-	margin: 10px auto 0;
+	margin: 0 auto;
 	position: relative;
 }
 #grid {
 	-webkit-background-size: 41px;
 	background-size: 41px;
 	background-image: none;
+	overflow: hidden;
 }
 #grid .widgetCont {
 	display: block;
@@ -329,9 +329,11 @@ html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button {
 	position: relative;
 	width: 100%;
 	margin: 0 0 20px;
+	z-index: 1000;
 }
 #grid .widgetCont#widget-twitter {
 	text-align: center;
+	min-height: 500px;
 }
 #grid .widgetCont#widget-twitter iframe {
 	width: 90%;
@@ -350,14 +352,14 @@ html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button {
 	border-top-width: 1px;
 }
 .textFeedContainer {
-	padding-top: .5em;	
+	padding-top: .25em;	
 }
 .textFeedContainer:first-child {
 	margin-top: 39px;
 }
 .textFeedBody {
 	margin-bottom: 0.25em;
-	display: block;
+	display: inline-block;
 }
 .textFeedContainer img {
 	width: 7.16332%;
@@ -368,11 +370,14 @@ html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button {
 	overflow: hidden;
 }
 body.scheme-dark .widgetCont .widgetTitle {
-	color: #cfcfcf;
-	font-weight: bold;
+	color: #F3F4F3;
 	font-size: 16px;	
 	left: 14px;
-	line-height: 41px;
+	line-height: 40px;
+	font-family: 'print_clearlyregular', sans-serif;
+	letter-spacing: 1px;
+	text-shadow: 2px 2px 0px rgba(0,0,0,.9);
+	font-weight: bold;
 }
 .widgetBackground {
   position: absolute;
@@ -384,10 +389,6 @@ body.scheme-dark .widgetCont .widgetTitle {
   z-index: -20;
 	width: 98.5%;
 	height: 98.5%;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
 	top: 3px;
 	left: 3px;
 	opacity: 0.5;
@@ -396,13 +397,17 @@ body.scheme-dark .widgetCont .widgetTitle {
 	height: 100%;
 }
 @media screen and (min-width: 600px) {
-	.grid-container {
-		margin-top: 4px;
+	html, body {
+	  height: 100%;
+	  overflow: hidden;
+	}
+	body {
+	  background-size: 100%;
 	}
 	#grid .widgetCont {
 		width:29.16667%;
 		float: left;
-		margin: 6px -4px 0;
+		margin: 6px -4px 10px;
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
@@ -420,5 +425,55 @@ body.scheme-dark .widgetCont .widgetTitle {
 @media screen and (min-width: 1249px) {
 	body {
 		font-size: 14px;
+	}
+}
+@media (min-height:200px) and (min-width: 600px) {
+	body.scheme-dark .widgetCont {
+		min-height: 220px;
+	}
+	body.scheme-dark .widgetCont .widgetTitle {
+		font-size: 14px;
+		line-height: 34px;
+	}
+	.textFeedContainer:first-child {
+		margin-top: 30px;
+	}
+	.textFeedTitle, .textFeedBody {
+		font-size: 12px !important;
+	}
+}
+@media (min-height:400px) and (min-width: 900px) {
+	body.scheme-dark .widgetCont {
+		min-height: 260px;
+	}
+	body.scheme-dark .widgetCont .widgetTitle {
+		font-size: 15px;
+	}
+	.textFeedTitle, .textFeedBody {
+		font-size: 13px !important;
+	}
+}
+@media (min-height:600px) and (min-width: 1200px) {
+	body.scheme-dark .widgetCont .widgetTitle {
+		font-size: 16px;
+		line-height: 45px;
+	}
+	.textFeedContainer:first-child {
+		margin-top: 40px;
+	}
+	.textFeedTitle, .textFeedBody {
+		font-size: 14px !important;
+	}
+}
+@media (min-height:800px) and (min-width: 1400px) {
+	body.scheme-dark .widgetCont .widgetTitle {
+		font-size: 20px;
+		line-height: 45px;
+	}
+	.textFeedContainer:first-child {
+		margin-top: 40px;
+	}
+	.textFeedTitle, .textFeedBody {
+		font-size: 18px !important;
 	}
 }
