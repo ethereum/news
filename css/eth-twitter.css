@@ -22,7 +22,8 @@ html, .p-author .profile .p-name, .custom-timeline-owner-profile .p-name, .cards
 	font-size: 14px !important;
 }
 p.e-entry-title {
-		line-height: 1.6 !important;
+		line-height: 1.55 !important;
+		padding-top: 5px;
 }
 @media (min-height:200px) and (min-width:100px) {
 	.var-chromeless .timeline-header {
@@ -44,7 +45,7 @@ p.e-entry-title {
 		height: 40px;
 	}
 	.h-feed * {
-		font-size: 14px !important;
+		font-size: 13px !important;
 	}
 }
 @media (min-height:600px) and (min-width:360px) {
