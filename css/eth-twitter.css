@@ -21,7 +21,10 @@ html, .p-author .profile .p-name, .custom-timeline-owner-profile .p-name, .cards
 .var-narrow .timeline-header .summary a {
 	font-size: 14px !important;
 }
-@media (min-height:200px) and (min-width:200px) {
+p.e-entry-title {
+		line-height: 1.6 !important;
+}
+@media (min-height:200px) and (min-width:100px) {
 	.var-chromeless .timeline-header {
 		height: 30px;
 	}
@@ -31,10 +34,9 @@ html, .p-author .profile .p-name, .custom-timeline-owner-profile .p-name, .cards
 	}
 	.h-feed * {
 		font-size: 12px !important;
-		line-height: 1.4;
 	}
 }
-@media (min-height:600px) {
+@media (min-height:400px) and (min-width:320px) {
 	.timeline-header .custom-timeline-summary a:link, .timeline-header .custom-timeline-summary a:visited, .timeline-header .summary, .timeline-header .summary a:link, .timeline-header .summary a:visited {
 		line-height: 45px;
 	}
@@ -45,7 +47,7 @@ html, .p-author .profile .p-name, .custom-timeline-owner-profile .p-name, .cards
 		font-size: 14px !important;
 	}
 }
-@media (min-height:800px) {
+@media (min-height:600px) and (min-width:360px) {
 	.timeline-header .custom-timeline-summary a:link, .timeline-header .custom-timeline-summary a:visited, .timeline-header .summary, .timeline-header .summary a:link, .timeline-header .summary a:visited {
 		font-size: 20px;
 	}
