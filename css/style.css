@@ -12,15 +12,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 HTML ELEMENTS
 ============================== */
 body {
-  color:#333;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   min-height: 555px;
-	font-family: RobotoLight,"Helvetica Neue",Arial,sans-serif;
+	font-family: "Helvetica Neue",Arial,sans-serif;
   font-size: 12px;
   width: 100%;
   height: 100%;
-	background-image: url('../images/poster.jpg');
+	background-image: url('/images/ethereumsplash-bg-web01-min.jpg');
 	background-position: 50% 50%;
 }
 body.scheme-dark {
@@ -32,7 +31,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button {
 	padding: 0;
 	margin: 0;
-	font-family: RobotoLight,"Helvetica Neue",Arial,sans-serif;
+	font-family: "Helvetica Neue",Arial,sans-serif;
 	text-decoration: none;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
@@ -49,22 +48,18 @@ html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button {
 a {
   cursor: pointer;
   text-decoration: none;
-  color: #333;
-	border-bottom: 1px solid #333;
+  color: #90A0F0;
+	border-bottom: 1px solid #90A0F0;
 	-webkit-transition: all 0.5s ease 0s;
 	-moz-transition: all 0.5s ease 0s;
 	-ms-transition: all 0.5s ease 0s;
 	-o-transition: all 0.5s ease 0s;
 	transition: all 0.5s ease 0s;
 }
-a:hover{
-	text-decoration:none;
-	outline:none;
-	color:#2A6496;
-}
+a:hover,
 a:active {
   text-decoration: none;
-	color: #333;
+	color: #F3F4F3;
   outline: none;
 }
 form {
@@ -86,7 +81,7 @@ h5 {
   padding: 0 0 3px 0;
 }
 .highlight {
-  color: #333;
+  color: #00bdff;
 }
 li {
   margin-top: 4px;
@@ -205,7 +200,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   display: block;
   text-align: left;
   font-size: 75%;
-  color: #333;
+  color: #aaaaaa;
   font-weight: bold;
 }
 .textFeedItem > a {
@@ -216,7 +211,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   position: relative;
 }
 .textFeedTitle {
-  color: #333;
+  color: #F3F4F3;
 	font-weight: bold;
 	margin-right: .25em;
 }
@@ -262,50 +257,48 @@ GRID
 
 /* Color Scheme */
 body.scheme-dark {
-  color: #333;
+  color: #ccc;
   background-color: black;
 }
 body.scheme-dark .widgetTitle {
-  color: #333;
+  color: #aaa;
 }
 body.scheme-dark .widgetBackground,
 body.scheme-dark .widgetDisable {
-	background: #d1d1d1;
-	background: rgba(209, 209, 209,0.98);
-	box-shadow: 1px 1px 2px 1px #888888;
-	-webkit-box-shadow: 1px 1px 2px 1px #888888;
-	-moz-box-shadow: 1px 1px 2px 1px #888888;
-	-ms-box-shadow: 1px 1px 2px 1px #888888;
-	-o-box-shadow: 1px 1px 2px 1px #888888;
-
+	background: #27323f;
+	background: rgba(39, 50, 63,0.98);
+	box-shadow: 0 0 3px rgba(0,0,0,.6);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,.6);
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,.6);
+	-ms-box-shadow: 0 0 3px rgba(0,0,0,.6);
+	-o-box-shadow: 0 0 3px rgba(0,0,0,.6);
 }
-
 body.scheme-dark .leaderboardContainer,
 body.scheme-dark .listContainer,
 body.scheme-dark .textFeedContainer,
 body.scheme-dark .tableWidget tr {
-  border-top-color: #f4f4f4;
+  border-top-color: #2d3a49;
 }
 
 body.scheme-dark text {
-  fill: #333;
+  fill: #ffffff;
 }
 body.Triggers.scheme-dark .lt-watermark {
-  background-image: url(./static/website/doc/tools-triggers.png);
+  background-image: url(/static/website/doc/tools-triggers.png);
 }
 body.scheme-light {
   color: #333;
   background-color: white;
 }
 body.scheme-light #grid {
-  background-image: url(./static/img/square-bg-alt.png);
+  background-image: url(/static/img/square-bg-alt.png);
 }
 body.scheme-light .widgetTitle {
-  color: #333;
+  color: #555;
 }
 body.scheme-light .widgetBackground,
 body.scheme-light .widgetDisable {
-  background-color: #333;
+  background-color: #ddd;
   -webkit-box-shadow: 0px 0px 5px #000;
   -moz-box-shadow: 0px 0px 5px #000;
   box-shadow: 0px 0px 5px #000;
@@ -314,7 +307,7 @@ body.scheme-light .leaderboardContainer,
 body.scheme-light .listContainer,
 body.scheme-light .textFeedContainer,
 body.scheme-light .tableWidget tr {
-  border-top-color: #333;
+  border-top-color: #c8c8c8;
 }
 /* CUSTOM CSS OVERRIDES */
 
@@ -377,12 +370,13 @@ body.scheme-light .tableWidget tr {
 	overflow: hidden;
 }
 body.scheme-dark .widgetCont .widgetTitle {
-	color: #333;
+	color: #F3F4F3;
 	font-size: 16px;	
 	left: 14px;
 	line-height: 40px;
 	font-family: 'print_clearlyregular', sans-serif;
 	letter-spacing: 1px;
+	text-shadow: 2px 2px 0px rgba(0,0,0,.9);
 	font-weight: bold;
 }
 .widgetBackground {
