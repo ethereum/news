@@ -3,7 +3,7 @@ var fixTwitter = 0;
 function fixTwitStyle() {
 	if(fixTwitter==0){
 		var cssLink = document.createElement("link");
-		cssLink.href = "/css/eth-twitter.css";  cssLink .rel = "stylesheet";  
+		cssLink.href = "./css/eth-twitter.css";  cssLink .rel = "stylesheet";  
 		cssLink .type = "text/css";
 		frames['twitter-widget-0'].document.body.appendChild(cssLink);
 		fixTwitter = 1;		

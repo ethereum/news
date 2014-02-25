@@ -1,5 +1,5 @@
 html, .p-author .profile .p-name, .custom-timeline-owner-profile .p-name, .cards-base p, .cards-base p a, .timeline-header .custom-timeline-summary, .timeline-header .custom-timeline-summary a:link, .timeline-header .custom-timeline-summary a:visited, .timeline-header .summary, .timeline-header .summary a:link, .timeline-header .summary a:visited, .p-author a.profile:hover .p-name, .p-author a.profile:focus .p-name {
-	color: #F3F4F3;
+	color: white;
 }
 .timeline-header .custom-timeline-summary a:link, .timeline-header .custom-timeline-summary a:visited, .timeline-header .summary, .timeline-header .summary a:link, .timeline-header .summary a:visited {
 	left: 14px;
